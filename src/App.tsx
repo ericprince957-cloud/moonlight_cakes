@@ -1,14 +1,15 @@
 import { useState, useEffect } from 'react';
 
 // ============================================
-// Sweet Delights - Cake Business Website
+// Moon Light Cakes & Event Planner - Website
 // A single-page responsive website for ordering cakes via WhatsApp
 // ============================================
 
 // --- CONFIGURATION ---
-// REPLACE THIS WITH THE ACTUAL WHATSAPP NUMBER (include country code, no + or spaces)
-// Example: "2348012345678" for a Nigerian number
-const WHATSAPP_NUMBER = "2348012345678";
+// WhatsApp number for Moon Light Cakes and Event Planner
+// Format: Nigeria country code (234) + number without leading 0
+// Actual number: 08116913617 → 2348116913617
+const WHATSAPP_NUMBER = "2348116913617";
 
 // Cake data for the gallery section
 const cakes = [
@@ -89,8 +90,8 @@ function Header() {
         {/* Logo */}
         <a href="#home" className="flex items-center gap-2">
           <span className="text-3xl">🎂</span>
-          <span className="font-serif text-2xl font-bold text-pink-600">
-            Sweet Delights
+          <span className="font-serif text-xl sm:text-2xl font-bold text-pink-600">
+            Moon Light Cakes
           </span>
         </a>
 
@@ -173,7 +174,7 @@ function HeroSection() {
 
           {/* Sub-headline */}
           <p className="text-lg sm:text-xl md:text-2xl text-brown-400 mb-10 font-light max-w-2xl mx-auto">
-            Custom designs, delicious flavors, made with love in Aba.
+            Custom designs, delicious flavors & event planning — made with love by Moon Light Cakes.
           </p>
 
           {/* CTA Button */}
@@ -210,7 +211,7 @@ function MenuSection() {
             Our Signature Cakes
           </h2>
           <p className="text-brown-400 text-lg max-w-2xl mx-auto">
-            Each cake is baked fresh with premium ingredients and decorated with care.
+            Each cake is baked fresh with premium ingredients and decorated with care by Moon Light Cakes.
             Choose from our favorites or request a custom creation.
           </p>
           {/* Decorative divider */}
@@ -282,7 +283,7 @@ function HowItWorksSection() {
     {
       icon: "💬",
       title: "We Confirm & Bake!",
-      description: "We'll confirm your order via WhatsApp, then get baking with love and care."
+      description: "Moon Light Cakes will confirm your order via WhatsApp, then get baking with love and care."
     }
   ];
 
@@ -359,7 +360,7 @@ function OrderFormSection() {
     e.preventDefault();
 
     // Format the order message for WhatsApp
-    const orderMessage = `🎂 *NEW CAKE ORDER - Sweet Delights* 🎂
+    const orderMessage = `🎂 *NEW CAKE ORDER - Moon Light Cakes & Event Planner* 🎂
 
 ━━━━━━━━━━━━━━━━━━
 📋 *Order Details:*
@@ -380,7 +381,7 @@ ${formData.message || "None"}
 ${formData.instructions || "None"}
 
 ━━━━━━━━━━━━━━━━━━
-Sent from Sweet Delights Website`;
+Sent from Moon Light Cakes Website`;
 
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(orderMessage);
@@ -402,7 +403,7 @@ Sent from Sweet Delights Website`;
             Place Your Custom Order
           </h2>
           <p className="text-brown-400 text-lg max-w-2xl mx-auto">
-            Fill out the form below and your order will be sent directly to our WhatsApp.
+            Fill out the form below and your order will be sent directly to Moon Light Cakes' WhatsApp.
             We'll confirm availability and discuss details with you!
           </p>
         </div>
@@ -578,11 +579,11 @@ function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-3xl">🎂</span>
-              <span className="font-serif text-2xl font-bold">Sweet Delights</span>
+              <span className="font-serif text-xl font-bold">Moon Light Cakes & Event Planner</span>
             </div>
             <p className="text-white/70 text-sm leading-relaxed">
-              Handcrafted cakes made with love in Aba, Nigeria. Every cake tells a story —
-              let us help you tell yours.
+              Handcrafted cakes & full event planning services made with love.
+              Every celebration deserves a perfect touch — let us make yours unforgettable.
             </p>
           </div>
 
@@ -602,13 +603,13 @@ function Footer() {
             <h4 className="font-serif text-lg font-bold mb-4">Get In Touch</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-3 text-white/70 text-sm">
-                <span>📍</span> Aba, Abia State, Nigeria
+                <span>📍</span> Nigeria
               </li>
               <li className="flex items-center gap-3 text-white/70 text-sm">
-                <span>📞</span> +234 801 234 5678
+                <span>📞</span> 0811 691 3617
               </li>
               <li className="flex items-center gap-3 text-white/70 text-sm">
-                <span>📧</span> sweetdelights@email.com
+                <span>💬</span> WhatsApp: 0811 691 3617
               </li>
             </ul>
 
@@ -620,7 +621,7 @@ function Footer() {
               <a href="#" className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-full flex items-center justify-center transition-colors" aria-label="Facebook">
                 <i className="fab fa-facebook-f text-lg"></i>
               </a>
-              <a href="#" className="w-10 h-10 bg-white/10 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors" aria-label="WhatsApp">
+              <a href="https://wa.me/2348116913617" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 hover:bg-green-500 rounded-full flex items-center justify-center transition-colors" aria-label="WhatsApp">
                 <i className="fab fa-whatsapp text-lg"></i>
               </a>
               <a href="#" className="w-10 h-10 bg-white/10 hover:bg-pink-500 rounded-full flex items-center justify-center transition-colors" aria-label="Twitter">
@@ -633,7 +634,7 @@ function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 text-center">
           <p className="text-white/50 text-sm">
-            © {new Date().getFullYear()} Sweet Delights. All rights reserved.
+            © {new Date().getFullYear()} Moon Light Cakes & Event Planner. All rights reserved.
           </p>
           <p className="text-white/40 text-xs mt-2">
             Made with ❤️ by Vector Codes
